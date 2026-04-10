@@ -1,0 +1,1 @@
+https://devlab0110.blogspot.com/2022/06/blog-post.html
