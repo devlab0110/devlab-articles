@@ -3,6 +3,7 @@
 
 ## Статии от Димитър Станков
 
+- [AI и три направления](./ai-directions/main.md)
 - [Кодиран дълг](./coded-debt/main.md)
 - [Бази данни и тяхната магия в бързодействието](./db-magic/main.md)
 - [Хоризонтално скалиране](./scaling-horizontal/main.md)
