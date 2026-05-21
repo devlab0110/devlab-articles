@@ -9,11 +9,9 @@ Abstract Factory изисква абстрактен клас с методи з
 
 Идеята е да можем да създаваме еднакъв набор обекти с еднакво предназначение, но с различна имплементация.
 
+
+---
 Представете си че трябва да създадете GUI приложение, което да може да работи под windows, linux и mac ... тук идва мястото за Abstract Factory:
-
-
---------------------
-Factory.java
 ```java
 public abstract class Factory {
 
@@ -27,8 +25,6 @@ public abstract class Factory {
 ```
 
 
---------------------
-WindowsFactory.java
 ```java
 import com.devlab.abstract_factory.example_ui.windows.*;
 
@@ -68,8 +64,6 @@ public class WindowsFactory extends Factory {
 ```
 
 
---------------------
-LinuxFactory.java 
 ```java
 import com.devlab.abstract_factory.example_ui.linux.*;
 
@@ -108,8 +102,6 @@ public class LinuxFactory extends Factory {
 }
 ```
 
---------------------
-MacFactory.java 
 ```java
 import com.devlab.abstract_factory.example_ui.mac.*;
 
@@ -148,7 +140,7 @@ public class MacFactory extends Factory {
 }
 ```
 
---------------------
+---
 Имаме:
 - абстрактен клас Factory
 - и три фабрики наследяващи Factory: WindowsFactory, LinuxFactory и MacFactory
@@ -198,5 +190,5 @@ Abstract Factory ни позволя с лекота да превключвам
 При Abstract Factory имаме отделни фабрики за отделни групи от обекти който споделят еднакво предназначение, но имат различна имплементация.
 
 
---------------------
+---
 В това [repository](https://github.com/devlab0110/design-patterns-java-examples) може да откриете повече примери за използването на Design patterns ...

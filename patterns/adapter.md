@@ -15,10 +15,9 @@
 ... няма никакъв смисъл да се прави общо адаптиране за база от данни и примерно файлова система
 ... най-общо казано това което се адаптира трябва да е бъде профилирано в една обща група.
 
+---
 Adapter Pattern изисква общ interface към който да се придържат самите адаптори:
 
---------------------
-Adapter.java
 ```java
 public interface Adapter {
 
@@ -29,8 +28,6 @@ public interface Adapter {
 }
 ```
 
---------------------
-FooAdapter.java
 ```java
 public class FooAdapter implements Adapter{
 
@@ -59,9 +56,6 @@ public class FooAdapter implements Adapter{
 }
 ```
 
-
---------------------
-BarAdapter.java 
 ```java
 public class BarAdapter implements Adapter{
 
@@ -90,8 +84,6 @@ public class BarAdapter implements Adapter{
 }
 ```
 
---------------------
-Foo.java
 ```java
 public class Foo {
 
@@ -110,9 +102,6 @@ public class Foo {
 }
 ```
 
-
---------------------
-Bar.java
 ```java
 public class Bar {
 
@@ -131,7 +120,7 @@ public class Bar {
 }
 ```
 
---------------------
+---
 Въпреки че примера изглежда доста скалъпен и непрактичен, все пак показва съвсем ясно и еднозначно идеята на този патерн:
 - имаме общ интерфейс Adapter
 - два адаптора FooAdapter и BarAdapter
@@ -159,7 +148,7 @@ public class Test {
             return;
         }
 
-        System.out.println("------------------");
+        System.out.println("::::::::::::");
         adapter.methodA();
         adapter.methodB();
         adapter.methodC();
@@ -169,9 +158,9 @@ public class Test {
 }
 ```
 
---------------------
+---
 Както се вижда в тестовия код , няма никакво значение какво стои зад адаптора защото, то ще бъде използвано индиректно по-един и начин (тоест ще бъде използвано индиректно през едни и същи методи)
 
 
---------------------
+---
 В това [repository](https://github.com/devlab0110/design-patterns-java-examples) може да откриете повече примери за използването на Design patterns ...

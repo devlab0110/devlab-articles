@@ -16,7 +16,7 @@
 Нека да разгледаме даден пример за да стане по-ясно и разбираемо: 
 
 
---------------------
+---
 ```java
 public interface Command {
     public void execute();
@@ -25,7 +25,7 @@ public interface Command {
 ```
 
 
---------------------
+---
 ```java
 public class SoundMaxCommand implements Command {
 
@@ -47,8 +47,6 @@ public class SoundMaxCommand implements Command {
 }
 ```
 
-
---------------------
 ```java
 public class SoundMinCommand implements Command {
 
@@ -71,7 +69,6 @@ public class SoundMinCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class SoundOffCommand implements Command {
 
@@ -94,7 +91,6 @@ public class SoundOffCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class SoundOnCommand implements Command {
 
@@ -117,7 +113,6 @@ public class SoundOnCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class LightDevice {
 
@@ -135,7 +130,6 @@ public class LightDevice {
 ```
 
 
---------------------
 ```java
 public class SoundDevice {
 
@@ -153,7 +147,6 @@ public class SoundDevice {
 ```
 
 
---------------------
 ```java
 public class LightBlueCommand implements Command {
 
@@ -176,7 +169,6 @@ public class LightBlueCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class LightGreenCommand implements Command {
 
@@ -199,7 +191,6 @@ public class LightGreenCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class LightOffCommand implements Command {
 
@@ -222,7 +213,6 @@ public class LightOffCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class LightOnCommand implements Command {
 
@@ -245,7 +235,6 @@ public class LightOnCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class LightRedCommand implements Command {
 
@@ -268,7 +257,6 @@ public class LightRedCommand implements Command {
 ```
 
 
---------------------
 ```java
 public class LightWhiteCommand implements Command {
 
@@ -290,16 +278,16 @@ public class LightWhiteCommand implements Command {
 }
 ```
 
---------------------
+---
 Въпреки че примерът стана доста обширен, мисля че описанието му си остава просто и ясно , защото имаме:
 - един интерфейс Command
 - един куп класове/команди следващи въпросният интерфейс
-- две "устройства" LightDevice и SoundDevice които се контролират от различните Command и това е
+- две "устройства" LightDevice и SoundDevice които се контролират от различните Command и това е.
 
 
+---
 Силата на този патерн се вижда най-ясно когато започнем да го ползваме: 
 
-Manager.java
 ```java
 public class Manager {
 
@@ -319,15 +307,12 @@ public class Manager {
 
 ```
 
-
---------------------
-Test.java
 ```java
 public class Test {
 
     public static void main(String[] args) {
 
-        System.out.println("------------------");
+        System.out.println("::::::::::::");
         System.out.println("Prepare commands:");
         System.out.println("- light on");
         System.out.println("- sound on");
@@ -365,7 +350,7 @@ public class Test {
         commands.add(new SoundOffCommand(sound));
 
 
-        System.out.println("MANAGER ------------------");
+        System.out.println("::::::::::::");
         System.out.println("running:");
         Manager manager = new Manager(commands);
         manager.run();
@@ -375,7 +360,7 @@ public class Test {
 }
 ```
 
---------------------
+---
 Тук имаме един Manager който приема списък с команди и в последствие ги изпълнява без да се интересува, какво точно правят тези команди , и какво точно контролират/използват те ...
 
 В тестовият клас просто подготвяме този списък с команди ...
@@ -384,7 +369,7 @@ public class Test {
 
 
 
---------------------
+---
 В това [repository](https://github.com/devlab0110/design-patterns-java-examples) може да откриете повече примери за използването на Design patterns ...
 
 

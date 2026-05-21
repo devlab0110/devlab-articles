@@ -11,11 +11,9 @@
 
 Този патерн изисква най-вече interface за класовете, които на практика ще играят ролята на мост между едната група и другата група
 
+
+---
 Нека да разгледаме този примерен код за да стане по-ясно: 
-
-
---------------------
-View.java 
 ```java
 public abstract class View {
 
@@ -29,8 +27,6 @@ public abstract class View {
 }
 ```
 
---------------------
-ViewDetails.java
 ```java
 public class ViewDetails extends View {
 
@@ -41,7 +37,7 @@ public class ViewDetails extends View {
     @Override
     public String getHtml() {
 
-        System.out.println("------------------");
+        System.out.println("::::::::::::");
         System.out.println("View Details Bridge: ");
 
         String html = "";
@@ -64,8 +60,6 @@ public class ViewDetails extends View {
 }
 ```
 
---------------------
-ViewListItem.java
 ```java
 public class ViewListItem extends View {
 
@@ -76,7 +70,7 @@ public class ViewListItem extends View {
     @Override
     public String getHtml() {
 
-        System.out.println("------------------");
+        System.out.println("::::::::::::");
         System.out.println("View List Item Bridge: ");
 
         String html = "";
@@ -96,8 +90,6 @@ public class ViewListItem extends View {
 }
 ```
 
---------------------
-Resource.java
 ```java
 public interface Resource {
     public String getTitle();
@@ -106,8 +98,6 @@ public interface Resource {
 }
 ```
 
---------------------
-AlbumResource.java
 ```java
 public class AlbumResource implements Resource {
 
@@ -133,8 +123,6 @@ public class AlbumResource implements Resource {
 }
 ```
 
---------------------
-ArtistResource.java
 ```java
 public class ArtistResource implements Resource {
 
@@ -160,8 +148,6 @@ public class ArtistResource implements Resource {
 }
 ```
 
---------------------
-BannerResource.java
 ```java
 public class BannerResource implements Resource {
 
@@ -187,8 +173,6 @@ public class BannerResource implements Resource {
 }
 ```
 
---------------------
-BookResource.java
 ```java
 public class BookResource implements Resource {
 
@@ -214,8 +198,6 @@ public class BookResource implements Resource {
 }
 ```
 
---------------------
-Album.java
 ```java
 public class Album {
 
@@ -246,8 +228,6 @@ public class Album {
 }
 ```
 
---------------------
-Artist.java 
 ```java
 public class Artist {
 
@@ -278,8 +258,6 @@ public class Artist {
 }
 ```
 
---------------------
-Banner.java
 ```java
 public class Banner {
 
@@ -310,8 +288,6 @@ public class Banner {
 }
 ```
 
---------------------
-Book.java
 ```java
 public class Book {
 
@@ -342,7 +318,7 @@ public class Book {
 }
 ```
 
---------------------
+---
 Имаме:
 - едната група: abstract View с ViewDetails и ViewListItem
 - "мостът" който се състои в: interface Resource заедно с AlbumResource, ArtistResource, BannerResource, BookResource
@@ -398,7 +374,7 @@ public class Test {
 
 
         // html ....
-        System.out.println("------------------");
+        System.out.println("::::::::::::");
         System.out.println("html");
         System.out.println(html);
 ```
@@ -410,6 +386,6 @@ public class Test {
 
 
 
---------------------
+---
 В това [repository](https://github.com/devlab0110/design-patterns-java-examples) може да откриете повече примери за използването на Design patterns ...
 

@@ -4,6 +4,7 @@
 ## Статии от Димитър Станков
 
 
+- [Design patterns](./patterns/main.md)
 - [Meta програмиране](./meta-programming/main.md)
 - [AI и три направления](./ai-directions/main.md)
 - [Кодиран дълг](./coded-debt/main.md)

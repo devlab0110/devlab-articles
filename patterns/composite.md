@@ -11,10 +11,8 @@
 ... тоест всяко дърво има два "вида" компоненти, такива които имат разклонения и такива които са крайна точка (листо)
 ... тук идва мястото на Composite патерна, защото с негова помощ унифициране работата с тези два "вида" компоненти и за ползващият дървото няма никакво значение в коя точка на дървото се намира.
 
+---
 Нека да разгледаме пример: 
-
-
---------------------
 ```java
 public interface Todo {
     public String buildHtml();
@@ -22,7 +20,6 @@ public interface Todo {
 ```
 
 
---------------------
 ```java
 public class TodoSingle implements Todo {
 
@@ -45,7 +42,6 @@ public class TodoSingle implements Todo {
 ```
 
 
---------------------
 ```java
 public class TodoProject implements Todo {
 
@@ -76,19 +72,17 @@ public class TodoProject implements Todo {
         return html;
     }
 
-
-
 }
 ```
 
-
---------------------
 Имаме:
 - основен interface Todo
 - TodoSingle който отговоря за крайните точки
 - и TodoProject който отговоря за точките които имат разклонения...
 ... както сами забелязвате и двата типа точки/компоненти/класа имат еднакъв интерфейс и точно това е ключовото за този патерн.
 
+
+---
 Нека сега да разгледаме и пример за ползването на въпросните класове: 
 
 ```java
@@ -96,11 +90,11 @@ public class Test {
 
     public static void main(String[] args) {
 
-        System.out.println("------------------");
+        System.out.println("::::::::::::");
         Todo todo1 = new TodoSingle("todo1");
         todo1.buildHtml();
 
-        System.out.println("\n------------------");
+        System.out.println("::::::::::::");
         List<Todo> todos = new ArrayList<>();
         todos.add(new TodoSingle("todo2.1"));
         todos.add(new TodoSingle("todo2.2"));
@@ -116,7 +110,7 @@ public class Test {
 Примера е съвсем семпъл, но ако се вгледаме малко по-внимателно ще разберем, че този който получава и използва обект Todo на практика не се интересува дали в него се съдържа дърво или списък и няма нужда да прави каквото и да било проверки и рекурсивни обхождания за да вземе въпросният HTML ... нужно е само да извика метода buildHtml(). 
 
 
---------------------
+---
 В това [repository](https://github.com/devlab0110/design-patterns-java-examples) може да откриете повече примери за използването на Design patterns ...
 
 
