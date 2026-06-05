@@ -3,7 +3,7 @@
 
 ## Статии от Димитър Станков
 
-- [Механизми](./patterns/mechanism.md)
+- [Механизми](./mechanism/main.md)
 - [Design patterns](./patterns/main.md)
 - [Meta програмиране](./meta-programming/main.md)
 - [AI и три направления](./ai-directions/main.md)
