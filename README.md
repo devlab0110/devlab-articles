@@ -3,10 +3,15 @@
 
 ## Статии от Димитър Станков
 
+
 - [Механизми](./mechanism/main.md)
-- [Design patterns](./patterns/main.md)
 - [Meta програмиране](./meta-programming/main.md)
 - [AI и три направления](./ai-directions/main.md)
+- [Проектът](./the-project/main.md)
+- [Презентацията](./the-presentation/main.md)
+- [Процесът](./the-process/main.md)
+- [Данните](./the-data/main.md)
+- [Design patterns](./patterns/main.md)
 - [Кодиран дълг](./coded-debt/main.md)
 - [Бази данни и тяхната магия в бързодействието](./db-magic/main.md)
 - [Хоризонтално скалиране](./scaling-horizontal/main.md)
