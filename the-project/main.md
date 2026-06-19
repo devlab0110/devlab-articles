@@ -10,9 +10,9 @@
 
 Тази статия дойде като естествен завършек на тези три:
 
-- [Проектът - Данните](../the-project-data/main.md)
-- [Проектът - Процесите](../the-project-processes/main.md)
-- [Проектът - Презентациите](../the-project-presentations/main.md)
+- [Данните](../the-data/main.md)
+- [Процесите](../the-processes/main.md)
+- [Презентациите](../the-presentations/main.md)
 
 моля прочетете ги преди да продължите 
 
