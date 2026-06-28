@@ -3,10 +3,12 @@
 
 ## Статии от Димитър Станков
 
+- [AI Направления](./ai-directions/main.md)
 - [AI Интеграция](./ai-integration/main.md)
+- [AI Workflow](./ai-workflow/main.md)
+
 - [Механизми](./mechanism/main.md)
 - [Meta програмиране](./meta-programming/main.md)
-- [AI и три направления](./ai-directions/main.md)
 - [Проектът](./the-project/main.md)
 - [Презентациите](./the-presentations/main.md)
 - [Процесите](./the-processes/main.md)
