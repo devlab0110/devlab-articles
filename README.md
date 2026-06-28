@@ -3,7 +3,7 @@
 
 ## Статии от Димитър Станков
 
-
+- [AI Интеграция](./ai-integration/main.md)
 - [Механизми](./mechanism/main.md)
 - [Meta програмиране](./meta-programming/main.md)
 - [AI и три направления](./ai-directions/main.md)
